@@ -21,13 +21,13 @@ This repository creates the `s9pk` package that is installed to run `SearXNG` on
 Clone the SearXNG package repository locally.
 
 ```
-git clone git@github.com:Start9Labs/searxng-startos.git
-cd searxng-startos
+git clone git@github.com:paulscode/searxng-api-startos.git
+cd searxng-api-startos
 ```
 
 ## Building
 
-To build the **SearXNG** service as a universal package, run the following command:
+To build the **SearXNG API** service as a universal package, run the following command:
 
 ```
 make
