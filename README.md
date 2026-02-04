@@ -2,7 +2,7 @@
   <img src="icon.png" alt="Project Logo" width="21%">
 </p>
 
-# Wrapper for SearXNG API, with shopping engine enabled
+# Wrapper for SearXNG API, with shopping engine
 
 [SearXNG](https://github.com/searxng/searxng) is a free internet metasearch engine which aggregates results from various search services and databases. Users are neither tracked nor profiled.
 This repository creates the `s9pk` package that is installed to run `SearXNG` on [StartOS](https://github.com/Start9Labs/start-os/).
