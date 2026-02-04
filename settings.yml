@@ -1,0 +1,54 @@
+# see https://docs.searxng.org/admin/engines/settings.html#use-default-settings
+use_default_settings: true
+server:
+  # base_url is defined in the SEARXNG_BASE_URL environment variable, see .env and docker-compose.yml
+  secret_key: "ultrasecretkey" # change this!
+  limiter: false # can be disabled for a private instance
+  image_proxy: true
+ui:
+  static_use_hash: true
+valkey:
+  url: valkey:////var/run/valkey.sock
+general:
+  debug: false
+  instance_name: "SearXNG API"
+  contact_url: false
+  enable_metrics: false
+search:
+  # Enable JSON format for API access (required for Serper bridge)
+  formats:
+    - html
+    - json
+    - csv
+    - rss
+outgoing: # communication with search engines
+  request_timeout: 3.5
+
+# Enable shopping engines for /shopping endpoint support
+engines:
+  # eBay - US
+  - name: ebay
+    engine: ebay
+    shortcut: eb
+    base_url: 'https://www.ebay.com'
+    disabled: false
+    inactive: false
+    timeout: 5
+    
+  # eBay - Germany
+  - name: ebay de
+    engine: ebay
+    shortcut: ebde
+    base_url: 'https://www.ebay.de'
+    disabled: false
+    inactive: false
+    timeout: 5
+    
+  # eBay - UK
+  - name: ebay uk
+    engine: ebay
+    shortcut: ebuk
+    base_url: 'https://www.ebay.co.uk'
+    disabled: false
+    inactive: false
+    timeout: 5
